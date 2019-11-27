@@ -1,0 +1,2 @@
+# samplinGL
+OpenGLでサンプリングを3Dでやってみる
