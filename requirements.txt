@@ -1,0 +1,7 @@
+nbsphinx
+sphinx-autobuild
+sphinx_rtd_theme
+pyopengl
+pyglm==0.4.8b1
+pillow
+numpy
