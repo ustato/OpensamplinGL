@@ -20,9 +20,15 @@ brew install glfw3
 pip install -r requirements.txt</code></pre>
 <h1 id="description">Description</h1>
 <h2 id="システム概要と特徴">システム概要と特徴</h2>
-<p>このシステムは多次元空間内の点を確率分布に基づいてサンプリングする方法であるマルコフ連鎖モンテカルロ法(Markov Chain Monte Carlo method, MCMC)と， それを拡張した効率的なサンプリング法のギブスサンプリング(Gibbs sampling)をリアルタイムで可視化する機能を提供する． ギブスサンプリングを可視化するにあたって，コンピュータグラフィックスライブラリのOpenGLと， OpenGLをプログラミング言語Pythonで利用できるパッケージPyOpenGLを用いている． システムの大きな特徴として，3次元ディリクレ分布のサンプリング結果を2次元上に射影し， 1描写におけるサンプル点数を1から9で自由に変更できるほか， 総サンプル点の分散に従って3次元ディリクレ分布の確率密度を簡易的にヒートマップ化している．</p>
+<p>このシステムは多次元空間内の点を確率分布に基づいてサンプリングする方法であるマルコフ連鎖モンテカルロ法(Markov Chain Monte Carlo method, MCMC)と， それを拡張した効率的なサンプリング法のギブスサンプリング(Gibbs sampling)をリアルタイムで可視化する機能を提供する．</p>
+<p>ギブスサンプリングを可視化するにあたって，コンピュータグラフィックスライブラリのOpenGLと， OpenGLをプログラミング言語Pythonで利用できるパッケージPyOpenGLを用いている．</p>
+<p>システムの大きな特徴として，3次元ディリクレ分布のサンプリング結果を2次元上に射影し， 1描写におけるサンプル点数を1から9で自由に変更できるほか， 総サンプル点の分散に従って3次元ディリクレ分布の確率密度を簡易的にヒートマップ化している．</p>
 <h2 id="システム動作説明">システム動作説明</h2>
-<p>PyOpneGLを利用するにあたって，OpenGL2.1以降，Python3.6以降の環境導入を推奨する． また，Pythonのパッケージ管理ツールpipを利用し，ソースコード<code>requirements.txt</code>内の各パッケージを導入する必要がある． その後，ソースコード<code>source/jupyter/gibbs_sampling.py</code>を実行する． 実行画面に説明が表示されるが，1から9の数字キーを押すとその数に応じてサンプル点数が変化して毎回描写され，qキーを押すとプログラムが終了する． 実行画面には，総サンプル点が黄緑色の点，平均点が黒色の点， 分散1シグマ範囲が赤色の三角形，分散2シグマ範囲が紫色の三角形，分散3シグマ範囲が青色の三角形で表示される．</p>
+<p>PyOpneGLを利用するにあたって，OpenGL2.1以降，Python3.6以降の環境導入を推奨する．</p>
+<p>また，Pythonのパッケージ管理ツールpipを利用し，<a href="./requirements.txt">requirements.txt</a>内の各パッケージを導入する必要がある．</p>
+<p>その後，<a href="./source/jupyter/gibbs_sampling.py">source/jupyter/gibbs_sampling.py</a>を実行する．</p>
+<p>実行画面に説明が表示されるが，1から9の数字キーを押すとその数に応じてサンプル点数が変化して毎回描写され，qキーを押すとプログラムが終了する．</p>
+<p>実行画面には，総サンプル点が黄緑色の点，平均点が黒色の点， 分散1シグマ範囲が赤色の三角形，分散2シグマ範囲が紫色の三角形，分散3シグマ範囲が青色の三角形で表示される．</p>
 <h2 id="数理モデルの説明">数理モデルの説明</h2>
 <p>ギブンサンプリングは3次元ディリクレ分布</p>
 <p><img src="https://latex.codecogs.com/gif.latex?{\rm&space;Dir}&space;\left(&space;\Theta&space;\middle|&space;{\bf&space;a}&space;\right)&space;=&space;\frac{&space;\Gamma&space;\left(&space;\sum_{k=1}^{3}&space;a_{k}&space;\right&space;)&space;}&space;{&space;\Pi_{k=1}^{3}&space;\Gamma&space;\left(&space;a_{k}&space;\right&space;)&space;}&space;\Pi_{k=1}^{3}&space;\theta_{k}^{a_{k}-1},&space;\quad&space;\theta_{k}&space;\ge&space;0,&space;\quad&space;\sum_{k=1}^{3}&space;\theta_{k}&space;=&space;1"></p>
@@ -36,6 +42,10 @@ pip install -r requirements.txt</code></pre>
 <p><img src="https://latex.codecogs.com/gif.latex?{\bf&space;\theta}^{t}"></p>
 <p>を得る方法である． これには，アルゴリズムで利用するマルコフ連鎖が不変分布に収束する十分条件の詳細釣り合い条件(detailed balance)と，そのマルコフモデルがエルゴード性を持つことが要求されている．</p>
 <h2 id="ラフスケッチ">ラフスケッチ</h2>
+<p>デモ映像</p>
+<figure>
+<img src="./image/gibbs_sampling.gif" alt="" /><figcaption>alt</figcaption>
+</figure>
 
 </body>
 </html>
