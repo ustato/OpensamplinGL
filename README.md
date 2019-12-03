@@ -53,7 +53,7 @@ PyOpneGLを利用するにあたって，OpenGL2.1以降，Python3.6以降の環
 
 に従って
 
-<img src="https://latex.codecogs.com/gif.latex?{\bf&space;\theta}^{t}">
+<img src="https://latex.codecogs.com/gif.latex?\Theta^{t}">
 
 を得る方法である．
 これには，アルゴリズムで利用するマルコフ連鎖が不変分布に収束する十分条件の詳細釣り合い条件(detailed balance)と，そのマルコフモデルがエルゴード性を持つことが要求されている．
