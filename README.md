@@ -30,15 +30,25 @@ PyOpneGLを利用するにあたって，OpenGL2.1以降，Python3.6以降の環
 
 ## 数理モデルの説明
 ギブンサンプリングは3次元ディリクレ分布
+
 <img src="https://latex.codecogs.com/gif.latex?{\rm&space;Dir}&space;\left(&space;\Theta&space;\middle|&space;{\bf&space;a}&space;\right)&space;=&space;\frac{&space;\Gamma&space;\left(&space;\sum_{k=1}^{3}&space;a_{k}&space;\right&space;)&space;}&space;{&space;\Pi_{k=1}^{3}&space;\Gamma&space;\left(&space;a_{k}&space;\right&space;)&space;}&space;\Pi_{k=1}^{3}&space;\theta_{k}^{a_{k}-1},&space;\quad&space;\theta_{k}&space;\ge&space;0,&space;\quad&space;\sum_{k=1}^{3}&space;\theta_{k}&space;=&space;1">
+
 に従う変数
+
 <img src="https://latex.codecogs.com/gif.latex?\Theta&space;&&space;\sim&space;&&space;p&space;\left(&space;\Theta&space;)&space;=&space;p&space;\left(&space;\theta_{1},&space;\theta_{2},&space;\theta_{3}&space;)">
+
 を目標として，
+
 <img src="https://latex.codecogs.com/gif.latex?\theta_{1}^{t&plus;1}&space;&&space;\sim&space;&&space;p&space;\left(&space;\theta_{1}&space;\middle|&space;\theta_{2}^{t},&space;\theta_{3}^{t}&space;\right&space;)">
+
 <img src="https://latex.codecogs.com/gif.latex?\theta_{2}^{t&plus;1}&space;&&space;\sim&space;&&space;p&space;\left(&space;\theta_{2}&space;\middle|&space;\theta_{1}^{t&plus;1},&space;\theta_{3}^{t}&space;\right&space;)">
+
 <img src="https://latex.codecogs.com/gif.latex?\theta_{3}^{t&plus;1}&space;&&space;\sim&space;&&space;p&space;\left(&space;\theta_{3}&space;\middle|&space;\theta_{1}^{t&plus;1},&space;\theta_{2}^{t&plus;1}&space;\right&space;)">
+
 に従って
+
 <img src="https://latex.codecogs.com/gif.latex?{\bf&space;\theta}^{t}">
+
 を得る方法である．
 これには，アルゴリズムで利用するマルコフ連鎖が不変分布に収束する十分条件の詳細釣り合い条件(detailed balance)と，そのマルコフモデルがエルゴード性を持つことが要求されている．
 
