@@ -132,6 +132,7 @@ class gibbs_over_relaxation():
 
 
 def draw():
+    global mcmc
     global mean_point
     global sigma_points
     
@@ -195,6 +196,8 @@ def draw():
     [glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(s)) for s in "purple triangle:2 sigma area"]
     glRasterPos(p1[0]+0.3, p1[1]-0.2)
     [glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(s)) for s in "blue    triangle:3 sigma area"]
+    glRasterPos(p1[0]+0.3, p1[1]-0.3)
+    [glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(s)) for s in "parameter a:"+str(list(mcmc.a))]
     
     glFlush()
     glutSwapBuffers()
