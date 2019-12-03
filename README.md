@@ -41,7 +41,7 @@ PyOpneGLを利用するにあたって，OpenGL2.1以降，Python3.6以降の環
 
 に従う変数
 
-<img src="https://latex.codecogs.com/gif.latex?\Theta&space;&&space;\sim&space;&&space;p&space;\left(&space;\Theta&space;)&space;=&space;p&space;\left(&space;\theta_{1},&space;\theta_{2},&space;\theta_{3}&space;)">
+<img src="https://latex.codecogs.com/gif.latex?\Theta^{t+1}&space;&&space;\sim&space;&&space;p&space;\left(&space;\Theta^{t}&space;)&space;=&space;p&space;\left(&space;\theta_{1}^{t},&space;\theta_{2}^{t},&space;\theta_{3}^{t}&space;)">
 
 を目標として，
 
