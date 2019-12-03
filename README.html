@@ -30,7 +30,7 @@ pip install -r requirements.txt</code></pre>
 <p>実行画面に説明が表示されるが，1から9の数字キーを押すとその数に応じてサンプル点数が変化して毎回描写され，qキーを押すとプログラムが終了する．</p>
 <p>実行画面には，総サンプル点が黄緑色の点，平均点が黒色の点， 分散1シグマ範囲が赤色の三角形，分散2シグマ範囲が紫色の三角形，分散3シグマ範囲が青色の三角形で表示される．</p>
 <h2 id="数理モデルの説明">数理モデルの説明</h2>
-<p>ギブンサンプリングは3次元ディリクレ分布</p>
+<p>ギブスサンプリングは3次元ディリクレ分布</p>
 <p><img src="https://latex.codecogs.com/gif.latex?{\rm&space;Dir}&space;\left(&space;\Theta&space;\middle|&space;{\bf&space;a}&space;\right)&space;=&space;\frac{&space;\Gamma&space;\left(&space;\sum_{k=1}^{3}&space;a_{k}&space;\right&space;)&space;}&space;{&space;\Pi_{k=1}^{3}&space;\Gamma&space;\left(&space;a_{k}&space;\right&space;)&space;}&space;\Pi_{k=1}^{3}&space;\theta_{k}^{a_{k}-1},&space;\quad&space;\theta_{k}&space;\ge&space;0,&space;\quad&space;\sum_{k=1}^{3}&space;\theta_{k}&space;=&space;1"></p>
 <p>に従う変数</p>
 <p><img src="https://latex.codecogs.com/gif.latex?\Theta^{t+1}&space;&&space;\sim&space;&&space;p&space;\left(&space;\Theta^{t}&space;)&space;=&space;p&space;\left(&space;\theta_{1}^{t},&space;\theta_{2}^{t},&space;\theta_{3}^{t}&space;)"></p>

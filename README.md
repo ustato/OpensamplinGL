@@ -35,7 +35,7 @@ PyOpneGLを利用するにあたって，OpenGL2.1以降，Python3.6以降の環
 分散1シグマ範囲が赤色の三角形，分散2シグマ範囲が紫色の三角形，分散3シグマ範囲が青色の三角形で表示される．
 
 ## 数理モデルの説明
-ギブンサンプリングは3次元ディリクレ分布
+ギブスサンプリングは3次元ディリクレ分布
 
 <img src="https://latex.codecogs.com/gif.latex?{\rm&space;Dir}&space;\left(&space;\Theta&space;\middle|&space;{\bf&space;a}&space;\right)&space;=&space;\frac{&space;\Gamma&space;\left(&space;\sum_{k=1}^{3}&space;a_{k}&space;\right&space;)&space;}&space;{&space;\Pi_{k=1}^{3}&space;\Gamma&space;\left(&space;a_{k}&space;\right&space;)&space;}&space;\Pi_{k=1}^{3}&space;\theta_{k}^{a_{k}-1},&space;\quad&space;\theta_{k}&space;\ge&space;0,&space;\quad&space;\sum_{k=1}^{3}&space;\theta_{k}&space;=&space;1">
 
