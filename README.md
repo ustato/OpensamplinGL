@@ -60,6 +60,10 @@ PyOpneGLを利用するにあたって，OpenGL2.1以降，Python3.6以降の環
 
 
 ## ラフスケッチ
+3次元ディリクレ分布は非負の変数を持つので，以下のように立体構造を2次元に表現できる．
+
+![alt]("http://ailaby.com/wp-content/uploads/2016/08/dhi_x123.png")
+
 デモ映像
 
 ![alt](./image/gibbs_sampling.gif)
